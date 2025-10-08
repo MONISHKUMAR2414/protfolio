@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Monish Kumar | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">Monish<span>Kumar</span></div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>Hello, I'm <span id="typed-name"></span></h1>
+      <p id="typed-role"></p>
+      <div class="hero-buttons">
+        <a href="#projects" class="btn">Explore Projects</a>
+        <a href="#contact" class="btn-outline">Contact Me</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section reveal">
+    <h2 class="section-title">About Me</h2>
+    <div class="about-container">
+      <img src="your-photo.jpg" alt="Monish Kumar" class="profile-photo">
+      <div class="about-text">
+        <p>
+          I'm <strong>Monish Kumar</strong>, a passionate <strong>Full Stack Developer</strong> specializing in backend systems and AI integration.
+          Currently pursuing <strong>B.Tech (AI & ML)</strong> at Rajalakshmi Engineering College, Chennai.
+        </p>
+        <p>
+          I interned at <strong>T-Care Inc.</strong>, where I developed REST APIs using Spring Boot and optimized data retrieval by 30%.
+          My key interests include machine learning, natural language processing, and smart automation.
+        </p>
+        <p>
+          As a participant in the <strong>Smart India Hackathon</strong>, I built an <strong>AI-Based Agri-Bot</strong> — a smart farming assistant
+          that analyzes soil and weather conditions to automate irrigation and recommend suitable crops.
+        </p>
+        <a href="Monish_Kumar_Resume.pdf" class="resume-btn" download>⬇️ Download Resume</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="section bg-light reveal">
+    <h2 class="section-title">Technical Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-card">Java</div>
+      <div class="skill-card">Python</div>
+      <div class="skill-card">Spring Boot</div>
+      <div class="skill-card">HTML5</div>
+      <div class="skill-card">CSS3</div>
+      <div class="skill-card">JavaScript</div>
+      <div class="skill-card">Machine Learning</div>
+      <div class="skill-card">TensorFlow</div>
+      <div class="skill-card">Git/GitHub</div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="section reveal">
+    <h2 class="section-title">Featured Projects</h2>
+    <div class="project-grid">
+
+      <div class="project-card" onclick="openModal('agribot-modal')">
+        <div class="project-header">
+          <div class="project-icon">🤖</div>
+          <div class="project-status">Featured</div>
+        </div>
+        <h3>AI-Based Agri-Bot</h3>
+        <p class="project-subtitle">Smart India Hackathon Project</p>
+        <p>Smart IoT and AI-based farming assistant with real-time monitoring and crop prediction capabilities.</p>
+        <div class="tech-stack">
+          <span class="tech-tag">IoT</span>
+          <span class="tech-tag">Machine Learning</span>
+          <span class="tech-tag">Python</span>
+        </div>
+        <div class="project-footer">
+          <span class="learn-more">Click to learn more →</span>
+        </div>
+      </div>
+
+      <div class="project-card" onclick="openModal('college-modal')">
+        <div class="project-header">
+          <div class="project-icon">🎓</div>
+          <div class="project-status">ML Project</div>
+        </div>
+        <h3>ML-Based College Predictor</h3>
+        <p class="project-subtitle">Educational Decision Support System</p>
+        <p>Intelligent college recommendation system using machine learning algorithms to predict admission chances.</p>
+        <div class="tech-stack">
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">Scikit-learn</span>
+          <span class="tech-tag">Data Analysis</span>
+        </div>
+        <div class="project-footer">
+          <span class="learn-more">Click to learn more →</span>
+        </div>
+      </div>
+
+      <div class="project-card" onclick="openModal('story-modal')">
+        <div class="project-header">
+          <div class="project-icon">📖</div>
+          <div class="project-status">NLP Project</div>
+        </div>
+        <h3>Story Matching System</h3>
+        <p class="project-subtitle">Content Recommendation Engine</p>
+        <p>Advanced NLP-based recommender system for finding similar books and movies using deep learning.</p>
+        <div class="tech-stack">
+          <span class="tech-tag">BERT</span>
+          <span class="tech-tag">TF-IDF</span>
+          <span class="tech-tag">NLP</span>
+        </div>
+        <div class="project-footer">
+          <span class="learn-more">Click to learn more →</span>
+        </div>
+      </div>
+
+      <div class="project-card" onclick="openModal('api-modal')">
+        <div class="project-header">
+          <div class="project-icon">⚙️</div>
+          <div class="project-status">Backend</div>
+        </div>
+        <h3>RESTful API System</h3>
+        <p class="project-subtitle">Store Management Platform</p>
+        <p>Robust backend application with comprehensive CRUD operations and role-based access control.</p>
+        <div class="tech-stack">
+          <span class="tech-tag">Spring Boot</span>
+          <span class="tech-tag">MySQL</span>
+          <span class="tech-tag">REST API</span>
+        </div>
+        <div class="project-footer">
+          <span class="learn-more">Click to learn more →</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project Modals -->
+  <div id="agribot-modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('agribot-modal')">&times;</span>
+      <div class="modal-header">
+        <h2>🤖 AI-Based Agri-Bot</h2>
+        <p class="modal-subtitle">Smart India Hackathon 2024 Project</p>
+      </div>
+      <div class="modal-body">
+        <div class="project-overview">
+          <h3>🎯 Project Overview</h3>
+          <p>An innovative IoT and AI-powered agricultural assistant designed to revolutionize farming practices through intelligent automation and data-driven insights.</p>
+        </div>
+        
+        <div class="features-section">
+          <h3>🔧 Key Features</h3>
+          <ul class="feature-list">
+            <li><strong>Real-time Environmental Monitoring:</strong> IoT sensors continuously track soil pH, humidity, temperature, and moisture levels</li>
+            <li><strong>AI-Powered Crop Prediction:</strong> Random Forest ML model analyzes soil conditions to recommend optimal crops</li>
+            <li><strong>Smart Irrigation System:</strong> Automated watering based on soil moisture and weather predictions</li>
+            <li><strong>Cloud Dashboard:</strong> Real-time data visualization and historical analytics</li>
+            <li><strong>Mobile Alerts:</strong> Instant notifications for critical conditions</li>
+          </ul>
+        </div>
+
+        <div class="tech-details">
+          <h3>💻 Technical Implementation</h3>
+          <div class="tech-grid">
+            <div class="tech-item">
+              <strong>Hardware:</strong> Arduino, Raspberry Pi, pH sensors, moisture sensors, humidity sensors
+            </div>
+            <div class="tech-item">
+              <strong>Machine Learning:</strong> Random Forest, Scikit-learn, data preprocessing, feature engineering
+            </div>
+            <div class="tech-item">
+              <strong>Backend:</strong> Python Flask, SQLite database, REST APIs
+            </div>
+            <div class="tech-item">
+              <strong>Frontend:</strong> React.js, Chart.js for data visualization
+            </div>
+          </div>
+        </div>
+
+        <div class="impact-section">
+          <h3>🌟 Impact & Results</h3>
+          <ul>
+            <li>Reduced water usage by 35% through smart irrigation</li>
+            <li>Improved crop yield predictions with 87% accuracy</li>
+            <li>Automated 90% of routine farming monitoring tasks</li>
+            <li>Selected for Smart India Hackathon final round</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="college-modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('college-modal')">&times;</span>
+      <div class="modal-header">
+        <h2>🎓 ML-Based College Predictor</h2>
+        <p class="modal-subtitle">Educational Decision Support System</p>
+      </div>
+      <div class="modal-body">
+        <div class="project-overview">
+          <h3>🎯 Project Overview</h3>
+          <p>An intelligent college recommendation system that helps students make informed decisions about higher education based on their academic performance and preferences.</p>
+        </div>
+        
+        <div class="features-section">
+          <h3>🔧 Key Features</h3>
+          <ul class="feature-list">
+            <li><strong>Cutoff Analysis:</strong> Processes historical cutoff data from 500+ colleges</li>
+            <li><strong>Personalized Recommendations:</strong> ML algorithms match student profiles with suitable institutions</li>
+            <li><strong>Probability Scoring:</strong> Calculates admission chances with confidence intervals</li>
+            <li><strong>Interactive Dashboard:</strong> User-friendly interface for exploring options</li>
+            <li><strong>Trend Analysis:</strong> Historical data insights and future predictions</li>
+          </ul>
+        </div>
+
+        <div class="tech-details">
+          <h3>💻 Technical Implementation</h3>
+          <div class="tech-grid">
+            <div class="tech-item">
+              <strong>Machine Learning:</strong> Random Forest, Logistic Regression, feature selection
+            </div>
+            <div class="tech-item">
+              <strong>Data Processing:</strong> Pandas, NumPy, data cleaning and normalization
+            </div>
+            <div class="tech-item">
+              <strong>Visualization:</strong> Matplotlib, Seaborn, interactive plots
+            </div>
+            <div class="tech-item">
+              <strong>Deployment:</strong> Streamlit web app, cloud hosting
+            </div>
+          </div>
+        </div>
+
+        <div class="impact-section">
+          <h3>🌟 Impact & Results</h3>
+          <ul>
+            <li>Achieved 92% accuracy in admission predictions</li>
+            <li>Helped 200+ students in college selection</li>
+            <li>Reduced decision-making time by 60%</li>
+            <li>Featured in college career guidance sessions</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="story-modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('story-modal')">&times;</span>
+      <div class="modal-header">
+        <h2>📖 Story Matching System</h2>
+        <p class="modal-subtitle">NLP-Powered Content Recommendation Engine</p>
+      </div>
+      <div class="modal-body">
+        <div class="project-overview">
+          <h3>🎯 Project Overview</h3>
+          <p>An advanced natural language processing system that analyzes text input to recommend similar books, movies, and stories using state-of-the-art deep learning techniques.</p>
+        </div>
+        
+        <div class="features-section">
+          <h3>🔧 Key Features</h3>
+          <ul class="feature-list">
+            <li><strong>Semantic Text Analysis:</strong> BERT-based understanding of narrative themes and contexts</li>
+            <li><strong>Multi-modal Recommendations:</strong> Suggests books, movies, and TV shows</li>
+            <li><strong>Similarity Scoring:</strong> TF-IDF and cosine similarity for precise matching</li>
+            <li><strong>Genre Classification:</strong> Automatic categorization of content types</li>
+            <li><strong>Personalized Results:</strong> User preference learning and adaptation</li>
+          </ul>
+        </div>
+
+        <div class="tech-details">
+          <h3>💻 Technical Implementation</h3>
+          <div class="tech-grid">
+            <div class="tech-item">
+              <strong>NLP Models:</strong> BERT, TF-IDF, Word2Vec, sentence transformers
+            </div>
+            <div class="tech-item">
+              <strong>Data Sources:</strong> IMDb, Goodreads, Wikipedia APIs
+            </div>
+            <div class="tech-item">
+              <strong>Backend:</strong> Python Flask, PostgreSQL, caching layer
+            </div>
+            <div class="tech-item">
+              <strong>Deployment:</strong> Docker containers, REST API endpoints
+            </div>
+          </div>
+        </div>
+
+        <div class="impact-section">
+          <h3>🌟 Impact & Results</h3>
+          <ul>
+            <li>Processed 10,000+ books and movies in database</li>
+            <li>Achieved 85% user satisfaction in recommendations</li>
+            <li>Average response time under 2 seconds</li>
+            <li>Implemented in local library recommendation system</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="api-modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('api-modal')">&times;</span>
+      <div class="modal-header">
+        <h2>⚙️ RESTful API System</h2>
+        <p class="modal-subtitle">Enterprise Store Management Platform</p>
+      </div>
+      <div class="modal-body">
+        <div class="project-overview">
+          <h3>🎯 Project Overview</h3>
+          <p>A comprehensive backend system for store management with robust API architecture, authentication, and role-based access control for enterprise-level operations.</p>
+        </div>
+        
+        <div class="features-section">
+          <h3>🔧 Key Features</h3>
+          <ul class="feature-list">
+            <li><strong>Complete CRUD Operations:</strong> Full product, inventory, and user management</li>
+            <li><strong>Role-Based Access:</strong> Admin, manager, and employee permission levels</li>
+            <li><strong>JWT Authentication:</strong> Secure token-based authentication system</li>
+            <li><strong>API Documentation:</strong> Swagger/OpenAPI integration</li>
+            <li><strong>Database Optimization:</strong> Indexed queries and connection pooling</li>
+          </ul>
+        </div>
+
+        <div class="tech-details">
+          <h3>💻 Technical Implementation</h3>
+          <div class="tech-grid">
+            <div class="tech-item">
+              <strong>Backend Framework:</strong> Spring Boot, Spring Security, JPA/Hibernate
+            </div>
+            <div class="tech-item">
+              <strong>Database:</strong> MySQL, connection pooling, transaction management
+            </div>
+            <div class="tech-item">
+              <strong>API Design:</strong> RESTful principles, JSON responses, error handling
+            </div>
+            <div class="tech-item">
+              <strong>Testing:</strong> JUnit, Mockito, integration tests
+            </div>
+          </div>
+        </div>
+
+        <div class="impact-section">
+          <h3>🌟 Impact & Results</h3>
+          <ul>
+            <li>Improved data retrieval performance by 30%</li>
+            <li>Reduced API response time to under 200ms</li>
+            <li>Implemented in live production environment</li>
+            <li>Zero security vulnerabilities in penetration testing</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact -->
+  <section id="contact" class="section bg-light reveal">
+    <h2 class="section-title">Get in Touch</h2>
+    <div class="contact-info">
+      <p><strong>Email:</strong> <a href="mailto:monishkumar.6347@gmail.com">monishkumar.6347@gmail.com</a></p>
+      <p><strong>Phone:</strong> 6369429058</p>
+      <p><strong>Address:</strong> 9/156, Pilliyar Kovil Street, Athanancherry Village, Padappai</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Monish Kumar | Designed with ❤️ using HTML, CSS, JS</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
